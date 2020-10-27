@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{84F01896-953A-4174-B5BA-23E2AB87A1A4}</ProjectGuid>
+    <ProjectGuid>{61EC844A-C9D8-4B35-86F5-B0288B086C6A}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{6968b3a4-1835-46a3-ac5c-1ae33b475983}</TemplateGuid>
     <OutputType>Library</OutputType>
@@ -90,7 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GreenWorldApp\GreenWorldApp.csproj">
-      <Project>{C510723A-26CE-4116-89A9-B3C287F6ED59}</Project>
+      <Project>{F66676C1-1D66-4959-8C13-DF2898E99B17}</Project>
       <Name>GreenWorldApp</Name>
     </ProjectReference>
   </ItemGroup>

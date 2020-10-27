@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6838ED2E-C4D7-4DFE-BB27-9FF05A1CBF1D}</ProjectGuid>
+    <ProjectGuid>{0A76DFC5-41B0-41FF-9690-1B1603A7FDC7}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{89a4fe7c-635d-49c9-8d8c-5cd363c0d68d}</TemplateGuid>
     <OutputType>Exe</OutputType>
@@ -138,7 +138,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\GreenWorldApp\GreenWorldApp.csproj">
-      <Project>{C510723A-26CE-4116-89A9-B3C287F6ED59}</Project>
+      <Project>{F66676C1-1D66-4959-8C13-DF2898E99B17}</Project>
       <Name>GreenWorldApp</Name>
     </ProjectReference>
   </ItemGroup>
