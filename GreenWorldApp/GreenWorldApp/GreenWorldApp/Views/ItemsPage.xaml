@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GreenWorldApp.Views.ItemsPage"
-             Title="{Binding Title}"
+             Title="Products"
              xmlns:local="clr-namespace:GreenWorldApp.ViewModels"  
              xmlns:model="clr-namespace:GreenWorldApp.Models"  
              x:Name="BrowseItemsPage">

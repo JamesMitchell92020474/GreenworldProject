@@ -2,13 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GreenWorldApp.Views.HomePage"
-             Title="Home">
+             xmlns:vm="clr-namespace:GreenWorldApp.ViewModels"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:HomeViewModel />
+    </ContentPage.BindingContext>
     
     <ContentPage.Content>
         <StackLayout Padding="20">
-            <Label Text="Welcome to the Home Page!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <BoxView Color="#efefef"
+                     WidthRequest="300"
+                     HeightRequest="150"
+                      Margin="0,0,0,15"/>
             <Label Text="Popular Categories"/>
             <ScrollView Orientation="Horizontal" Margin="0,0,0,15">
                 <Grid>
