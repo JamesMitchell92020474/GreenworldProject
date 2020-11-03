@@ -145,4 +145,13 @@
       <Name>GreenWorldApp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ceramic_labels.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\garden_bag.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\side_table.jpg" />
+  </ItemGroup>
 </Project>
