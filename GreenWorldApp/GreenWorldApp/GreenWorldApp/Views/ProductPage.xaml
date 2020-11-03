@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GreenWorldApp.Views.ProductPage"
+             xmlns:vm="clr-namespace:GreenWorldApp.ViewModels"
+             Title="{Binding Title}">
+             
+    <TabbedPage.BindingContext>
+        <vm:ProductViewModel />
+    </TabbedPage.BindingContext>
+    
+    <!--Pages can be added as references or inline-->
+    <ContentPage Title="All" />
+    <ContentPage Title="Accessories" />
+    <ContentPage Title="Cleaning" />
+    <ContentPage Title="Clothing" />
+    <ContentPage Title="Furniture" />
+    <ContentPage Title="Gardening" />
+</TabbedPage>
