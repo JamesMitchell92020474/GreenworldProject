@@ -1,19 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GreenWorldApp.Views.ProductPage"
              xmlns:vm="clr-namespace:GreenWorldApp.ViewModels"
              Title="{Binding Title}">
              
-    <TabbedPage.BindingContext>
+    <ContentPage.BindingContext>
         <vm:ProductViewModel />
-    </TabbedPage.BindingContext>
+    </ContentPage.BindingContext>
     
     <!--Pages can be added as references or inline-->
-    <ContentPage Title="All" />
-    <ContentPage Title="Accessories" />
-    <ContentPage Title="Cleaning" />
-    <ContentPage Title="Clothing" />
-    <ContentPage Title="Furniture" />
-    <ContentPage Title="Gardening" />
-</TabbedPage>
+    
+    <ContentPage.Content>
+        <ListView x:Name="productList">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Description}">
+                        <TextCell.ContextActions>
+                            <MenuItem Text="Delete" IsDestructive="true" Clicked="Delete_Item" CommandParameter="{Binding .}" />
+                        </TextCell.ContextActions>
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="Add_Clicked" />
+    </ContentPage.ToolbarItems>
+ 
+</ContentPage>
