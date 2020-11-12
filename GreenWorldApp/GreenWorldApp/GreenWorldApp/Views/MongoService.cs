@@ -41,7 +41,7 @@ namespace GreenWorldApp.Views
 
         public async static Task<List<ProductItem>> GetAllItems()
         {
-            var allItems = await productItemsCollection
+            var allItems = await ProductItemsCollection
                 .Find(new BsonDocument())
                 .ToListAsync();
 
@@ -50,7 +50,7 @@ namespace GreenWorldApp.Views
 
         public async static Task<List<ProductItem>> SearchByName(string name)
         {
-            var results = await productItemsCollection
+            var results = await ProductItemsCollection
                             .AsQueryable()
                             .Where(tdi => tdi.Name.Contains(name))
                             .Take(10)
@@ -61,12 +61,12 @@ namespace GreenWorldApp.Views
 
         public async static Task InsertItem(ProductItem item)
         {
-            await productItemsCollection.InsertOneAsync(item);
+            await ProductItemsCollection.InsertOneAsync(item);
         }
 
         public async static Task<bool> DeleteItem(ProductItem item)
         {
-            var result = await productItemsCollection.DeleteOneAsync(tdi => tdi.Id == item.Id);
+            var result = await ProductItemsCollection.DeleteOneAsync(tdi => tdi.Id == item.Id);
 
             return result.IsAcknowledged && result.DeletedCount == 1;
         }
