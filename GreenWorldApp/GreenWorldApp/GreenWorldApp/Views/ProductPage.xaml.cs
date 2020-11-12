@@ -19,10 +19,9 @@ namespace GreenWorldApp.Views
             ProductItems = new ObservableCollection<ProductItem>();
 
             productList.ItemsSource = ProductItems;
-            Console.Out.WriteLine(ProductItems);
         }
 
-        protected async void OnAppearing()
+        protected async override void OnAppearing()
         {
             base.OnAppearing();
 
