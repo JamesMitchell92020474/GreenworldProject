@@ -22,13 +22,13 @@ namespace GreenWorldApp.Views
                 if (client == null || productItemsCollection == null)
                 {
                     var conx = "mongodb+srv://admin:admin@it6041project.mxz4f.mongodb.net/test?authSource=admin&replicaSet=atlas-zyx1o5-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true";
-                    MongoClientSettings settings = MongoClientSettings.FromUrl(
-                        new MongoUrl(conx)
-                    );
+                    //MongoClientSettings settings = MongoClientSettings.FromUrl(
+                    //    new MongoUrl(conx)
+                    //);
 
-                    settings.SslSettings = new SslSettings { EnabledSslProtocols = SslProtocols.Tls12 };
-
-                    client = new MongoClient(settings);
+                    //settings.SslSettings = new SslSettings { EnabledSslProtocols = SslProtocols.Tls12 };
+                    MongoClient client = new MongoClient(conx);
+                    //client = new MongoClient();
                     var db = client.GetDatabase(dbName);
 
                     var collectionSettings = new MongoCollectionSettings { ReadPreference = ReadPreference.Nearest };
