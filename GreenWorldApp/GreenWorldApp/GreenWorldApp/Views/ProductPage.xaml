@@ -10,22 +10,33 @@
     </ContentPage.BindingContext>
     
     <!--Pages can be added as references or inline-->
-    
-    <ContentPage.Content>
-        <ListView x:Name="productList">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="{Binding Name}" Detail="{Binding Description}">
-                        <TextCell.ContextActions>
-                            <MenuItem Text="Delete" IsDestructive="true" Clicked="Delete_Item" CommandParameter="{Binding .}" />
-                        </TextCell.ContextActions>
-                    </TextCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </ContentPage.Content>
+
+    <ListView x:Name="ProductView"
+        ItemsSource="{Binding Path=Customers}"
+        ListView.RowHeight ="300" > 
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Vertical">
+                        <Entry Text="{Binding Id}" IsEnabled="False"/>
+                        <Entry Text="{Binding ProductName}"/>
+                        <Entry Text="{Binding Price}"/>
+                        <Entry Text="{Binding StockLevel}"/>
+                        <Entry Text="{Binding Description}"/>
+                        <Entry Text="{Binding Image}"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="Add_Clicked" />
+        <ToolbarItem Name="Add" Activated="AddButton_Clicked"
+        Priority="0" Order="Secondary" />
+        <ToolbarItem Name="Remove" Activated="RemoveButton_Clicked"
+        Priority="1" Order="Secondary" />
+        <ToolbarItem Name="Remove all" Activated="RemoveAllButton_Clicked"
+        Priority="2" Order="Secondary" />
+        <ToolbarItem Name="Save" Activated="SaveButton_Clicked"
+        Priority="3" Order="Secondary" />
     </ContentPage.ToolbarItems>
- 
 </ContentPage>
