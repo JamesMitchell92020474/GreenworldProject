@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{68A359A2-29D3-4E8F-A5B9-C2C1D56FD599}</ProjectGuid>
+    <ProjectGuid>{54D3BB4F-A174-42DD-81B9-3797327CB53A}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{6968b3a4-1835-46a3-ac5c-1ae33b475983}</TemplateGuid>
     <OutputType>Library</OutputType>
@@ -92,12 +92,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GWApp\GWApp.csproj">
-      <Project>{947A46CA-5076-4577-8EF0-752339EF5EEB}</Project>
+      <Project>{B790A937-3984-48DF-8A02-E7D12997E62C}</Project>
       <Name>GWApp</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Access3.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Access4.jpg" />
@@ -110,6 +107,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Access2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Access3.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Clean4.png" />

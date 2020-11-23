@@ -2,19 +2,26 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-
+using System.Text;
 using Xamarin.Forms;
 
-using GWApp.Models;
-using GWApp.Services;
+/*using GWApp.Models;
+using GWApp.Services;*/
 
 namespace GWApp.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
 
-        bool isBusy = false;
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void OnPropertyChanged([CallerMemberName] string name = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+        //public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+
+        /*bool isBusy = false;
         public bool IsBusy
         {
             get { return isBusy; }
@@ -51,6 +58,6 @@ namespace GWApp.ViewModels
 
             changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        #endregion
+        #endregion*/
     }
 }
