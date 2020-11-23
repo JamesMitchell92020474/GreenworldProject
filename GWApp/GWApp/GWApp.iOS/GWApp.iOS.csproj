@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E00A8881-7E60-4572-BED8-61EAF11B87DC}</ProjectGuid>
+    <ProjectGuid>{346C51DF-B400-4D54-BE85-732304292C2A}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{89a4fe7c-635d-49c9-8d8c-5cd363c0d68d}</TemplateGuid>
     <OutputType>Exe</OutputType>
@@ -68,8 +68,8 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <BundleResource Include="Resources\Cloth3.webp" />
     <BundleResource Include="Resources\Cloth4.webp" />
+    <BundleResource Include="Resources\Cloth3.webp" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -140,66 +140,15 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\GWApp\GWApp.csproj">
-      <Project>{947A46CA-5076-4577-8EF0-752339EF5EEB}</Project>
+      <Project>{B790A937-3984-48DF-8A02-E7D12997E62C}</Project>
       <Name>GWApp</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\Gard4.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
     <BundleResource Include="Resources\Gard5.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Access1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Access2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Access3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Access4.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Access5.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Clean1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Clean2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Clean3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Clean4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Clean5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Cloth1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Cloth2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Cloth5.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Furn1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Furn2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Furn3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Furn4.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Furn5.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Gard1.jpeg" />
@@ -211,7 +160,64 @@
     <BundleResource Include="Resources\Gard3.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Gard4.jpeg" />
+    <BundleResource Include="Resources\Furn4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Furn5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Furn1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Furn2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Furn3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Cloth5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Cloth1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Cloth2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Clean4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Clean5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Clean1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Clean2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Clean3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Access4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Access5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Access1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Access2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Access3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\left.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\right.png" />
@@ -221,11 +227,5 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\cart.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\left.png" />
   </ItemGroup>
 </Project>

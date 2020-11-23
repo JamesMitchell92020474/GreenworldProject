@@ -1,7 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using GWApp.Services;
 using GWApp.Views;
 
 namespace GWApp
@@ -13,7 +12,6 @@ namespace GWApp
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 
