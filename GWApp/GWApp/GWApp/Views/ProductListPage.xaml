@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:vm="clr-namespace:GWApp.ViewModels"
+             xmlns:vm="clr-namespace:GWApp.ViewModel"
              mc:Ignorable="d" NavigationPage.HasNavigationBar="False"
              x:Class="GWApp.Views.ProductListPage">
 
@@ -18,6 +18,7 @@
         </Grid.RowDefinitions>
         <Grid Padding="0,10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout Spacing="20" HorizontalOptions="Start" VerticalOptions="Center">
+                <Image Source="search.png" Aspect="AspectFit" WidthRequest="15" HeightRequest="15"/>
                 <Image Source="user.png" Aspect="AspectFit" WidthRequest="15" HeightRequest="15"/>
                 <Image Source="cart.png" Aspect="AspectFit" WidthRequest="15" HeightRequest="15"/>
             </StackLayout>
@@ -27,8 +28,8 @@
                        HorizontalOptions="Center"/>
             </StackLayout>
         </Grid>
-        <CollectionView x:Name="productList" Margin="0,40,0,0" Grid.Row="1" ItemsSource="{Binding Products}" SelectionMode="Single" 
-                        SelectedItem="{Binding SelectedProduct}" VerticalScrollBarVisibility="Never" 
+        <CollectionView x:Name="burgerList" Margin="0,40,0,0" Grid.Row="1" ItemsSource="{Binding Burgers}" SelectionMode="Single" 
+                        SelectedItem="{Binding SelectedBurger}" VerticalScrollBarVisibility="Never" 
                         SelectionChangedCommand="{Binding SelectionCommand}">
             <CollectionView.ItemsLayout>
                 <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="20" HorizontalItemSpacing="20" Span="2"/>

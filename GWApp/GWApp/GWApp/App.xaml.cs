@@ -1,17 +1,18 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using GWApp.Views;
 
+[assembly: ExportFont("BebasNeue.ttf", Alias = "ThemeFont")]
+[assembly: ExportFont("Roboto.ttf", Alias = "LightFont")]
 namespace GWApp
 {
     public partial class App : Application
     {
-
         public App()
         {
             InitializeComponent();
-            MainPage = new AppShell();
+
+            MainPage = new NavigationPage(new TabShell());
         }
 
         protected override void OnStart()
