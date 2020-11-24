@@ -40,7 +40,7 @@
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
                             <Grid HorizontalOptions="FillAndExpand">
-                                <Label Text="{Binding Name}" TextColor="White" FontSize="105" FontFamily="ThemeFont" 
+                                <Label Text="{Binding Name}" TextColor="White" FontSize="20" FontFamily="ThemeFont" 
                                        HorizontalOptions="Center"/>
                                 <Image Source="{Binding Image}" Aspect="Fill" Margin="0,-50,0,0" HeightRequest="210" 
                                        WidthRequest="235" HorizontalOptions="Center" VerticalOptions="End"/>
@@ -57,7 +57,7 @@
                            FontFamily="ThemeFont" FontSize="25" HorizontalOptions="End"/>
                     <BoxView BackgroundColor="#F9B522" HeightRequest="2" WidthRequest="45" VerticalOptions="Start" 
                              HorizontalOptions="End"/>
-                    <Label Text="{Binding SelectedProduct.Description}" TextColor="White" WidthRequest="250" 
+                    <Label Text="{Binding SelectedProduct.Description}" TextColor="White" 
                            FontFamily="LightFont" FontSize="12" HorizontalOptions="End" HorizontalTextAlignment="End"/>
                     <Button Text="ORDER NOW" TextColor="Black" Padding="20,5" HeightRequest="35" CornerRadius="17" 
                             BackgroundColor="#F9B522" FontFamily="ThemeFont" HorizontalOptions="End"/>
