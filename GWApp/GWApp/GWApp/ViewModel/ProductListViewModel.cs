@@ -13,38 +13,38 @@ namespace GWApp.ViewModel
     {
         public ProductListViewModel()
         {
-            burgers = GetBurgers();
+            products = GetProducts();
         }
 
-        ObservableCollection<Burger> burgers;
-        public ObservableCollection<Burger> Burgers
+        ObservableCollection<Product> products;
+        public ObservableCollection<Product> Products
         {
-            get { return burgers; }
+            get { return products; }
             set
             {
-                burgers = value;
+                products = value;
                 OnPropertyChanged();
             }
         }
 
-        private Burger selectedBurger;
-        public Burger SelectedBurger
+        private Product selectedProduct;
+        public Product SelectedProduct
         {
-            get { return selectedBurger; }
+            get { return selectedProduct; }
             set
             {
-                selectedBurger = value;
+                selectedProduct = value;
                 OnPropertyChanged();
             }
         }
 
-        public ICommand SelectionCommand => new Command(DisplayBurger);
+        public ICommand SelectionCommand => new Command(DisplayProduct);
 
-        private void DisplayBurger()
+        private void DisplayProduct()
         {
-            if (selectedBurger != null)
+            if (selectedProduct != null)
             {
-                var viewModel = new ProductDetailViewModel { SelectedBurger = selectedBurger, Burgers = burgers, Position = burgers.IndexOf(selectedBurger) };
+                var viewModel = new ProductDetailViewModel { SelectedProduct = selectedProduct, Products = products, Position = products.IndexOf(selectedProduct) };
                 var detailsPage = new ProductDetailPage { BindingContext = viewModel };
 
                 var navigation = Application.Current.MainPage as NavigationPage;
@@ -52,16 +52,16 @@ namespace GWApp.ViewModel
             }
         }
 
-        private ObservableCollection<Burger> GetBurgers()
+        private ObservableCollection<Product> GetProducts()
         {
-            return new ObservableCollection<Burger>
+            return new ObservableCollection<Product>
             {
-                new Burger { Name = "CLASSIC", Price = 12.99f, Image = "classic.png", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies"},
-                new Burger { Name = "DOUBLE", Price = 19.99f, Image = "two.png", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies"},
-                new Burger { Name = "SHARK", Price = 17.29f, Image = "shark.png", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies"},
-                new Burger { Name = "CHICKEN", Price = 15.99f, Image = "chicken.png", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies"},
-                new Burger { Name = "MEAT", Price = 11.99f, Image = "meat.png", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies"},
-                new Burger { Name = "BBQ", Price = 13.99f, Image = "bbq.png", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies"}
+                new Product { Name = "CLASSIC", Price = 12.99f, Image = "classic.png", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies"},
+                new Product { Name = "DOUBLE", Price = 19.99f, Image = "two.png", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies"},
+                new Product { Name = "SHARK", Price = 17.29f, Image = "shark.png", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies"},
+                new Product { Name = "CHICKEN", Price = 15.99f, Image = "chicken.png", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies"},
+                new Product { Name = "MEAT", Price = 11.99f, Image = "meat.png", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies"},
+                new Product { Name = "BBQ", Price = 13.99f, Image = "bbq.png", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies"}
             };
         }
     }

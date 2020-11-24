@@ -10,24 +10,24 @@ namespace GWApp.ViewModel
 {
     public class ProductDetailViewModel : BaseViewModel
     {
-        ObservableCollection<Burger> burgers;
-        public ObservableCollection<Burger> Burgers
+        ObservableCollection<Product> products;
+        public ObservableCollection<Product> Products
         {
-            get { return burgers; }
+            get { return products; }
             set
             {
-                burgers = value;
+                products = value;
                 OnPropertyChanged();
             }
         }
 
-        private Burger selectedBurger;
-        public Burger SelectedBurger
+        private Product selectedProduct;
+        public Product SelectedProduct
         {
-            get { return selectedBurger; }
+            get { return selectedProduct; }
             set
             {
-                selectedBurger = value;
+                selectedProduct = value;
                 OnPropertyChanged();
             }
         }
@@ -37,18 +37,18 @@ namespace GWApp.ViewModel
         {
             get
             {
-                if (position != burgers.IndexOf(selectedBurger))
-                    return burgers.IndexOf(selectedBurger);
+                if (position != products.IndexOf(selectedProduct))
+                    return products.IndexOf(selectedProduct);
 
                 return position;
             }
             set
             {
                 position = value;
-                selectedBurger = burgers[position];
+                selectedProduct = products[position];
 
                 OnPropertyChanged();
-                OnPropertyChanged(nameof(SelectedBurger));
+                OnPropertyChanged(nameof(SelectedProduct));
             }
         }
 
@@ -62,7 +62,7 @@ namespace GWApp.ViewModel
             {
                 if (position == 0)
                 {
-                    Position = burgers.Count - 1;
+                    Position = products.Count - 1;
                     return;
                 }
 
@@ -70,7 +70,7 @@ namespace GWApp.ViewModel
             }
             else if (direction == "R")
             {
-                if (position == burgers.Count - 1)
+                if (position == products.Count - 1)
                 {
                     Position = 0;
                     return;

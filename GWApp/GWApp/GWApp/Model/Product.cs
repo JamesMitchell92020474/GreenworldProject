@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GWApp.Model
 {
-    public class Burger
+    public class Product
     {
         public string Name { get; set; }
         public float Price { get; set; }
