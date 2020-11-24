@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace GWApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ProdDetailPage : ContentPage
+    public partial class ProductDetailPage : ContentPage
     {
-        public ProdDetailPage()
+        public ProductDetailPage()
         {
             InitializeComponent();
         }

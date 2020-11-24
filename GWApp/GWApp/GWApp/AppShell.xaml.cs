@@ -4,6 +4,8 @@ using GWApp.ViewModels;
 using GWApp.Views;
 using Xamarin.Forms;
 
+[assembly: ExportFont("BebasNeue.ttf", Alias = "ThemeFont")]
+[assembly: ExportFont("Roboto.ttf", Alias = "LightFont")]
 namespace GWApp
 {
     public partial class AppShell : Xamarin.Forms.Shell
@@ -13,9 +15,5 @@ namespace GWApp
             InitializeComponent();
         }
 
-        private async void OnMenuItemClicked(object sender, EventArgs e)
-        {
-            await Shell.Current.GoToAsync("//LoginPage");
-        }
     }
 }

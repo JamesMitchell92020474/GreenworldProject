@@ -1,5 +1,4 @@
 ﻿using GWApp.Models;
-using GWApp.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,7 +8,7 @@ using Xamarin.Forms;
 
 namespace GWApp.ViewModels
 {
-    public class ProdDetailsViewModel : BaseViewModel
+    public class ProductDetailViewModel : BaseViewModel
     {
         ObservableCollection<Product> products;
         public ObservableCollection<Product> Products
@@ -81,5 +80,6 @@ namespace GWApp.ViewModels
             }
 
         }
+
     }
 }

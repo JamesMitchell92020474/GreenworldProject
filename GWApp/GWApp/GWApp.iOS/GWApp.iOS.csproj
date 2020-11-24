@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{346C51DF-B400-4D54-BE85-732304292C2A}</ProjectGuid>
+    <ProjectGuid>{8010DC15-AA3B-40FE-9433-0E3A772982B0}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{89a4fe7c-635d-49c9-8d8c-5cd363c0d68d}</TemplateGuid>
     <OutputType>Exe</OutputType>
@@ -140,9 +140,42 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\GWApp\GWApp.csproj">
-      <Project>{B790A937-3984-48DF-8A02-E7D12997E62C}</Project>
+      <Project>{D9F3AFF7-02E1-4D45-B9DF-4DCE51148BF1}</Project>
       <Name>GWApp</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\classic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\meat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\shark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\two.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bbq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\chicken.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Gard4.jpeg" />
@@ -212,20 +245,5 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Access3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\cart.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\left.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\right.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\search.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\user.png" />
   </ItemGroup>
 </Project>

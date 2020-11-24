@@ -11,7 +11,6 @@ namespace GWApp
         public App()
         {
             InitializeComponent();
-
             MainPage = new AppShell();
         }
 
