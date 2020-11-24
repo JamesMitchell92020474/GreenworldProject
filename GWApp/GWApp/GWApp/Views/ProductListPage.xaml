@@ -23,13 +23,13 @@
                 <Image Source="cart.png" Aspect="AspectFit" WidthRequest="15" HeightRequest="15"/>
             </StackLayout>
             <StackLayout Spacing="0" HorizontalOptions="Center" VerticalOptions="Center">
-                <Label Text="BURGER" TextColor="White" FontFamily="ThemeFont" FontSize="50" HorizontalOptions="Center"/>
-                <Label Text="SPOT" Margin="0,-5,0,0" TextColor="White" Opacity="0.5" FontFamily="LightFont" FontSize="25" 
+                <Label Text="GREEN" TextColor="White" FontFamily="ThemeFont" FontSize="50" HorizontalOptions="Center"/>
+                <Label Text="WORLD" Margin="0,-5,0,0" TextColor="White" Opacity="0.5" FontFamily="LightFont" FontSize="25" 
                        HorizontalOptions="Center"/>
             </StackLayout>
         </Grid>
-        <CollectionView x:Name="burgerList" Margin="0,40,0,0" Grid.Row="1" ItemsSource="{Binding Burgers}" SelectionMode="Single" 
-                        SelectedItem="{Binding SelectedBurger}" VerticalScrollBarVisibility="Never" 
+        <CollectionView x:Name="productList" Margin="0,40,0,0" Grid.Row="1" ItemsSource="{Binding Products}" SelectionMode="Single" 
+                        SelectedItem="{Binding SelectedProduct}" VerticalScrollBarVisibility="Never" 
                         SelectionChangedCommand="{Binding SelectionCommand}">
             <CollectionView.ItemsLayout>
                 <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="20" HorizontalItemSpacing="20" Span="2"/>
