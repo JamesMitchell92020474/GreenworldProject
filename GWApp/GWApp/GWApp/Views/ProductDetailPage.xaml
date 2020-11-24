@@ -13,6 +13,7 @@
         </Grid.RowDefinitions>
         <Grid Padding="0,10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout Spacing="20" HorizontalOptions="Start" VerticalOptions="Center">
+                <Image Source="search.png" Aspect="AspectFit" WidthRequest="15" HeightRequest="15"/>
                 <Image Source="user.png" Aspect="AspectFit" WidthRequest="15" HeightRequest="15"/>
                 <Image Source="cart.png" Aspect="AspectFit" WidthRequest="15" HeightRequest="15"/>
             </StackLayout>
