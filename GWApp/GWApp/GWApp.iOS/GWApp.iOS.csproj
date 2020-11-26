@@ -237,4 +237,19 @@
   <ItemGroup>
     <BundleResource Include="Resources\Access4.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Whittaker.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Capaldi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Eccleston.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Smith.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Tennant.jpg" />
+  </ItemGroup>
 </Project>
