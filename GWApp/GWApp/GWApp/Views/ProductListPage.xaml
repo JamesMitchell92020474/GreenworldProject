@@ -11,21 +11,15 @@
         <vm:ProductListViewModel />
     </ContentPage.BindingContext>
 
-    <Grid Padding="30" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+    <Grid Padding="30" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid Padding="0,10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <StackLayout Spacing="20" HorizontalOptions="Start" VerticalOptions="Center">
-                <Image Source="search.png" Aspect="AspectFit" WidthRequest="15" HeightRequest="15"/>
-                <Image Source="user.png" Aspect="AspectFit" WidthRequest="15" HeightRequest="15"/>
-                <Image Source="cart.png" Aspect="AspectFit" WidthRequest="15" HeightRequest="15"/>
-            </StackLayout>
-            <StackLayout Spacing="0" HorizontalOptions="Center" VerticalOptions="Center">
-                <Label Text="GREEN" TextColor="White" FontFamily="ThemeFont" FontSize="50" HorizontalOptions="Center"/>
-                <Label Text="WORLD" Margin="0,-5,0,0" TextColor="White" Opacity="0.5" FontFamily="LightFont" FontSize="25" 
-                       HorizontalOptions="Center"/>
+            <StackLayout Spacing="0" HorizontalOptions="Center" VerticalOptions="Start">
+                <Label Text="GREEN" TextColor="#1ac949" FontFamily="ThemeFont" FontSize="40" FontAttributes="Bold"/>
+                <Label Text="WORLD" TextColor="#018c27" FontFamily="ThemeFont" FontSize="40" FontAttributes="Bold"/>
             </StackLayout>
         </Grid>
         <CollectionView x:Name="productList" Margin="0,40,0,0" Grid.Row="1" ItemsSource="{Binding Products}" SelectionMode="Single" 
@@ -36,16 +30,16 @@
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="10" BackgroundColor="#131313" WidthRequest="145" HeightRequest="160">
+                    <Grid Padding="10" WidthRequest="145" HeightRequest="160">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <Image Aspect="AspectFill" Source="{Binding Image}" Margin="10" WidthRequest="125" HeightRequest="110" 
                                HorizontalOptions="Center" VerticalOptions="Center"/>
-                        <Label Grid.Row="1" Text="{Binding Name}" TextColor="#F9B522" FontFamily="ThemeFont" 
+                        <Label Grid.Row="1" Text="{Binding Name}" TextColor="#1ac949" FontFamily="ThemeFont" FontAttributes="Bold"
                                VerticalOptions="End" HorizontalOptions="Start"/>
-                        <Label Grid.Row="1" Text="{Binding Price, StringFormat='${0}'}" TextColor="White" FontFamily="ThemeFont"
+                        <Label Grid.Row="1" Text="{Binding Price, StringFormat='${0}'}" TextColor="#1ac949" FontFamily="ThemeFont" FontAttributes="Bold"
                                VerticalOptions="End" HorizontalOptions="End"/>
                     </Grid>
                 </DataTemplate>
