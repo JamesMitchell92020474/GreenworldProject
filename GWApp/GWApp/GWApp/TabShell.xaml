@@ -7,4 +7,6 @@
   <views:ProductListPage Title="Products" />
   <views:TeamPage Title="Team" />
   <views:ContactPage Title="Contact" />
+  <views:RegisterPage Title="Register" />
+  <views:LoginPage Title="Login" />
 </TabbedPage>

@@ -21,9 +21,7 @@
                 <Label Text="WORLD" TextColor="#018c27" FontFamily="ThemeFont" FontSize="40" FontAttributes="Bold"/>
             </StackLayout>
         </Grid>
-        <CollectionView x:Name="teamList" Margin="0,30,0,0" Grid.Row="1" ItemsSource="{Binding Team}" SelectionMode="Single" 
-                        SelectedItem="{Binding SelectedTeamMember}" VerticalScrollBarVisibility="Never" 
-                        SelectionChangedCommand="{Binding SelectionCommand}">
+        <CollectionView x:Name="teamList" Margin="0,30,0,0" Grid.Row="1" ItemsSource="{Binding Team}" VerticalScrollBarVisibility="Never">
             <CollectionView.ItemsLayout>
                 <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="20" HorizontalItemSpacing="20" Span="2"/>
             </CollectionView.ItemsLayout>

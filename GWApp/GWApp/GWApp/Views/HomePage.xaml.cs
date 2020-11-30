@@ -16,5 +16,10 @@ namespace GWApp.Views
         {
             InitializeComponent();
         }
+
+        async void Logout_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new HomePage());
+        }
     }
 }
