@@ -128,7 +128,7 @@
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.7.335</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.1141" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
@@ -137,9 +137,6 @@
       <Project>{ACA577B7-FA73-45E2-88E7-A6658CCA52B5}</Project>
       <Name>GWApp</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\meat.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\right.png" />
@@ -251,5 +248,20 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Tennant.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\GreenWorldLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\sms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\navigate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\phone.png" />
   </ItemGroup>
 </Project>
