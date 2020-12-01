@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:vm="clr-namespace:GWMobileApp.ViewModels"
-             x:Class="GWMobileApp.Views.ProductListPage">
+             x:Class="GWMobileApp.Views.ProductListPage"
+             Title="Products">
 
     <ContentPage.BindingContext>
         <vm:ProductListViewModel />
