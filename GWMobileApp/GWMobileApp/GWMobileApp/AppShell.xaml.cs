@@ -17,5 +17,10 @@ namespace GWMobileApp
         {
             await Shell.Current.GoToAsync("//LoginPage");
         }
+
+        private async void SignUpClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//RegisterPage");
+        }
     }
 }

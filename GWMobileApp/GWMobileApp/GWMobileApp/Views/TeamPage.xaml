@@ -4,7 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:vm="clr-namespace:GWMobileApp.ViewModels"
              mc:Ignorable="d" NavigationPage.HasNavigationBar="False"
-             x:Class="GWMobileApp.Views.TeamPage">
+             x:Class="GWMobileApp.Views.TeamPage"
+             Title="Team">
 
     <ContentPage.BindingContext>
         <vm:TeamViewModel />

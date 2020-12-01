@@ -9,7 +9,8 @@
              xmlns:v="clr-namespace:GWMobileApp.Views"
              mc:Ignorable="d"
              xmlns:vm="clr-namespace:GWMobileApp.ViewModels"
-             x:Class="GWMobileApp.Views.ContactPage">
+             x:Class="GWMobileApp.Views.ContactPage"
+             Title="Contact">
 
 
     <d:ContentPage.BindingContext>

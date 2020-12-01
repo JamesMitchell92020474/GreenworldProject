@@ -243,4 +243,16 @@
   <ItemGroup>
     <BundleResource Include="Resources\Cloth1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\navigate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\sms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\email.png" />
+  </ItemGroup>
 </Project>
