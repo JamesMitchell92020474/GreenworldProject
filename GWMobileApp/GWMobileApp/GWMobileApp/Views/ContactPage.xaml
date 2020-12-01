@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             
+             xmlns:local="clr-namespace:GWMobileApp.Views"
+             xmlns:Model="clr-namespace:GWMobileApp.Models"
+             xmlns:v="clr-namespace:GWMobileApp.Views"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:GWMobileApp.ViewModels"
+             x:Class="GWMobileApp.Views.ContactPage">
+
+
+    <d:ContentPage.BindingContext>
+        <v:ContactViewModel>
+            <x:Arguments>
+                <x:Contact Name="Green World"
+                               Address="167 Madras St"
+                               City="Christchurch"
+                               Email="contact@greenworld.co.nz"
+                               PhoneNumber="03-963 0033"
+                               Country="New Zealand"
+                               ZipCode="8021"/>
+            </x:Arguments>
+        </v:ContactViewModel>
+    </d:ContentPage.BindingContext>
+
+    <!--<pancake:PancakeView BackgroundGradientStartPoint="0,0" BackgroundGradientEndPoint="1,0" >
+        <pancake:PancakeView.BackgroundGradientStops>
+            <pancake:GradientStopCollection>
+                <pancake:GradientStop Color="#3498db" Offset="0" />
+                <pancake:GradientStop Color="Transparent" Offset="1" />
+            </pancake:GradientStopCollection>
+        </pancake:PancakeView.BackgroundGradientStops>-->
+    <StackLayout Padding="24,48,24,24" >
+        <Image Source="GreenWorldLogo.png" WidthRequest="200" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="End"/>
+         <Grid RowSpacing="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="44"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="44"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Phone & SMS-->
+            <ImageButton Source="phone.png" Grid.Row="0" VerticalOptions="Center"
+                         Command="{Binding PhoneCommand}" BackgroundColor="Transparent" d:BackgroundColor=""/>
+            <Label Grid.Column="1" Grid.Row="0"
+                   VerticalOptions="Center"
+                   Text="{Binding Contact.PhoneNumber}"/>
+            <ImageButton Source="sms.png" Grid.Row="0" Grid.Column="2" VerticalOptions="Center"
+                         Command="{Binding SmsCommand}" BackgroundColor="Transparent" d:BackgroundColor=""/>
+
+            <!--Email-->
+            <ImageButton Source="email.png" Grid.Row="1"  VerticalOptions="Center"
+                         Command="{Binding EmailCommand}" BackgroundColor="Transparent" d:BackgroundColor=""/>
+
+            <Label Grid.Column="1" Grid.Row="1"
+                   VerticalOptions="Center"
+                   Text="{Binding Contact.Email}"/>
+
+            <!--Address-->
+            <ImageButton Source="navigate.png" Grid.Row="2" VerticalOptions="Center"
+                         Command="{Binding NavigateCommand}" BackgroundColor="Transparent" d:BackgroundColor=""/>
+
+            <StackLayout Grid.Column="1" Grid.Row="2" VerticalOptions="Center">
+                <Label Text="{Binding Contact.Address}"/>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{Binding Contact.City}"/>
+                            <Span Text=" "/>
+                            <Span Text="{Binding Contact.State}"/>
+                            <Span Text=", "/>
+                            <Span Text="{Binding Contact.ZipCode}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+        </Grid>
+    </StackLayout>
+    <!--</pancake:PancakeView>-->
+</ContentPage>
