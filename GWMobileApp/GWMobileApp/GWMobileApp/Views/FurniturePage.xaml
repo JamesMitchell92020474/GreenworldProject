@@ -4,11 +4,11 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:vm="clr-namespace:GWMobileApp.ViewModels"
-             x:Class="GWMobileApp.Views.ProductListPage"
-             Title="All">
+             x:Class="GWMobileApp.Views.FurniturePage"
+             Title="Furniture">
 
     <ContentPage.BindingContext>
-        <vm:ProductListViewModel />
+        <vm:FurnitureViewModel />
     </ContentPage.BindingContext>
 
     <ContentPage.Content>

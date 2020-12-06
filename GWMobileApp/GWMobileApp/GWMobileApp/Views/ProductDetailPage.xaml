@@ -9,7 +9,7 @@
     <ContentPage.BindingContext>
         <vm:ProductDetailViewModel />
     </ContentPage.BindingContext>
-    
+
     <ContentPage.Content>
         <Grid Padding="30" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Grid.RowDefinitions>
