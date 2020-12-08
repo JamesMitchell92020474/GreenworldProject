@@ -62,6 +62,7 @@ namespace GWMobileApp.ViewModels
                 new Product { Name = "Eco Wood Bed Frame", Category = "Furniture", Price = 600.00f, StockLevel = 50, Image = "Furn4.jpg", Description = "Made from 100% reclaimed wood, eco-conscious materials and environmentally conscious manufacturing. Our Natural Wood Bed Frame is handmade in our Auckland shop, finished in Rustic Raw with a zero-VOC sealant. It assembles without tools. "},
                 new Product { Name = "Ceramic Labels", Category = "Gardening", Price = 10.50f, StockLevel = 50, Image = "Gard3.jpeg", Description = "Description: Know where you’ve planted your vegetables and then be able to reuse them once they’ve come up."}
             };
+
         }
 
         

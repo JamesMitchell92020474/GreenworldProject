@@ -255,4 +255,22 @@
   <ItemGroup>
     <BundleResource Include="Resources\email.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Products.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Register.png" />
+  </ItemGroup>
 </Project>

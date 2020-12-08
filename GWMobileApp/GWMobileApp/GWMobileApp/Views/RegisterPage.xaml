@@ -5,7 +5,7 @@
              Title="Sign Up">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
+            <StackLayout Padding="20">
                 <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -23,7 +23,7 @@
                         <Entry Placeholder="Password" IsPassword="True" FontSize="16" x:Name="EntryPassword"/>
                     </StackLayout>
                     <StackLayout Grid.Row="3">
-                        <Button Text="Sign Up" HorizontalOptions="CenterAndExpand" WidthRequest="100" TextColor="White" BackgroundColor="#86D32E" Clicked="Handle_Clicked"/>
+                        <Button Text="Sign Up" Margin="0,20,0,0" HorizontalOptions="CenterAndExpand" WidthRequest="200" TextColor="White" BackgroundColor="#86D32E" Clicked="Handle_Clicked"/>
                     </StackLayout>
                 </Grid>
             </StackLayout>

@@ -80,12 +80,12 @@
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent Title="Home" Icon="tab_about.png" Route="HomePage" ContentTemplate="{DataTemplate local:HomePage}" />
-        <ShellContent Title="Products" Icon="tab_about.png" Route="ProductTabsPage" ContentTemplate="{DataTemplate local:ProductTabsPage}" />
-        <ShellContent Title="Team" Icon="tab_feed.png" ContentTemplate="{DataTemplate local:TeamPage}" />
-        <ShellContent Title="Contact" Icon="tab_feed.png" ContentTemplate="{DataTemplate local:ContactPage}" />
-        <ShellContent Title="Login" Icon="tab_feed.png" ContentTemplate="{DataTemplate local:LoginPage}" />
-        <ShellContent Title="Sign Up" Icon="tab_feed.png" ContentTemplate="{DataTemplate local:RegisterPage}" />
+        <ShellContent Title="Home" Icon="Home.png" Route="HomePage" ContentTemplate="{DataTemplate local:HomePage}" />
+        <ShellContent Title="Products" Icon="Products.png" Route="ProductTabsPage" ContentTemplate="{DataTemplate local:ProductTabsPage}" />
+        <ShellContent Title="Team" Icon="Team.png" Route="TeamPage" ContentTemplate="{DataTemplate local:TeamPage}" />
+        <ShellContent Title="Contact" Icon="Contact.png" Route="ContactPage" ContentTemplate="{DataTemplate local:ContactPage}" />
+        <ShellContent Title="Login" Icon="Login.png" Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
+        <ShellContent Title="Sign Up" Icon="Register.png" Route="RegisterPage" ContentTemplate="{DataTemplate local:RegisterPage}" />
     </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
@@ -105,14 +105,19 @@
     // These may be provided inline as below or as separate classes.
 
     // This header appears at the top of the Flyout.
-    // https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyout-header
+    // https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyout-header-->
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
-            <Grid>ContentHere</Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Label Text="This is a custom header"/>
+            </Grid>
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
 
-    // ItemTemplate is for ShellItems as displayed in a Flyout
+    <!--// ItemTemplate is for ShellItems as displayed in a Flyout
     // https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#define-flyoutitem-appearance
     <Shell.ItemTemplate>
         <DataTemplate>

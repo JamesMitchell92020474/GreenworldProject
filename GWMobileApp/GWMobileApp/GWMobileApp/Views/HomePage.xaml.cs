@@ -16,5 +16,10 @@ namespace GWMobileApp.Views
         {
             InitializeComponent();
         }
+
+        public async void Accessories_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProductTabsPage());
+        }
     }
 }
