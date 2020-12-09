@@ -17,7 +17,7 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <CarouselView ItemsSource="{Binding Products}" Grid.Row="0" HeightRequest="288" IndicatorView="indicatorView">
+                <!--<CarouselView ItemsSource="{Binding Products}" Grid.Row="0" HeightRequest="350" IndicatorView="indicatorView">
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
                             <Grid RowSpacing="0" VerticalOptions="Start">
@@ -41,6 +41,11 @@
                                            FontSize="Small"
                                            TextColor="White"
                                            HorizontalOptions="Start"/>
+                                    <Button Text="See More"
+                                            Command="{Binding SelectionCommand}"
+                                            CommandParameter="{Binding Source={x:Binding SelectedProduct}}"
+                                            BackgroundColor="GreenYellow"
+                                            HorizontalOptions="Start"/>
                                 </StackLayout>
                             </Grid>
                         </DataTemplate>
@@ -51,58 +56,98 @@
                        SelectedIndicatorColor="#00a141"
                        HorizontalOptions="Center"
                        VerticalOptions="End"
-                       Margin="0,0,0,75"/>
-                
-                <Grid Padding="0,0"
-                      Margin="0,20,0,0"
-                      Grid.Row="1">
+                       Margin="0,0,0,75"/>-->
+                <Grid Grid.Row="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="Furn3.png"
+                           HeightRequest="300"
+                           Aspect="AspectFill"/>
+                    <BoxView BackgroundColor="#00a141"
+                             HeightRequest="160"
+                             WidthRequest="280"
+                             Opacity="0.4"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"/>
+                    <StackLayout WidthRequest="200"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Center">
+                        <Label Text="100% certified organic materials from our own farms."
+                               LineBreakMode="WordWrap"
+                               TextColor="White"
+                               HorizontalTextAlignment="Center"
+                               FontSize="22"
+                               FontAttributes="Bold"
+                               />
+                    </StackLayout>        
+                </Grid>
+                <Grid Grid.Row="1"
+                      Margin="20,30,0,0">
+                    <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="210"/>
                     </Grid.RowDefinitions>
                     <Label Text="Popular Picks"
                            Grid.Row="0"
                            FontAttributes="Bold"
-                           FontSize="16"
-                           Margin="20,0,0,0"/>
-                    <ScrollView Orientation="Horizontal" HorizontalOptions="Start" Grid.Row="1" HorizontalScrollBarVisibility="Never">
-                        <Grid Margin="20,0">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="240"/>
-                            </Grid.RowDefinitions>
-                            <CollectionView x:Name="productList" Grid.Row="0" ItemsSource="{Binding Products}" SelectionMode="Single" 
-                                            SelectedItem="{Binding SelectedProduct}" SelectionChangedCommand="{Binding SelectionCommand}">
-                                <CollectionView.ItemsLayout>
-                                    <GridItemsLayout Orientation="Horizontal"/>
-                                </CollectionView.ItemsLayout>
-                                <CollectionView.ItemTemplate>
-                                    <DataTemplate>
-                                        <Grid Margin="5">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="200"/>
-                                                <RowDefinition Height="40"/>
-                                            </Grid.RowDefinitions>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="250"/>
-                                            </Grid.ColumnDefinitions>
-                                            <Image Aspect="AspectFill" Grid.Row="0" Source="{Binding Image}" WidthRequest="250" HeightRequest="150" 
-                                                   HorizontalOptions="Start" VerticalOptions="StartAndExpand"/>
-                                            <StackLayout VerticalOptions="End" HeightRequest="40" BackgroundColor="#86d32e" Padding="20,10">
-                                                <Label Grid.Row="1" Text="{Binding Name}" TextColor="White" FontSize="Small" FontFamily="ThemeFont" FontAttributes="Bold"
-                                                       VerticalTextAlignment="Center" VerticalOptions="Start"/>
-                                                <Label Grid.Row="1" Margin="0,-8,0,0" Text="{Binding Price, StringFormat='${0}'}" TextColor="White" FontSize="Small" FontFamily="ThemeFont" FontAttributes="Bold"
-                                                       VerticalTextAlignment="Center"  VerticalOptions="Start"/>
-                                            </StackLayout>
-                                        </Grid>
-                                    </DataTemplate>
-                                </CollectionView.ItemTemplate>
-                            </CollectionView>
-                        </Grid>
-                    </ScrollView>
+                           FontSize="16"/>
+                    <CollectionView x:Name="popularPicksList"
+                                    ItemsSource="{Binding Products}" 
+                                    SelectionMode="Single"
+                                    SelectedItem="{Binding SelectedProduct}"
+                                    SelectionChangedCommand="{Binding SelectionCommand}"
+                                    Grid.Row="1">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Horizontal" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <!--<ScrollView Orientation="Horizontal">-->
+                                    <Grid Margin="0,0,10,0"
+                                          RowSpacing="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="150"/>
+                                            <RowDefinition Height="60"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="250"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Image Grid.Row="0"
+                                                Aspect="AspectFill"
+                                                Source="{Binding Image}"
+                                                WidthRequest="250"
+                                                HeightRequest="150" 
+                                                HorizontalOptions="Start"
+                                                VerticalOptions="StartAndExpand"/>
+                                        <StackLayout Grid.Row="1"
+                                                     BackgroundColor="#DEDEDE"
+                                                     Padding="10"
+                                                     HeightRequest="100"
+                                                     WidthRequest="230">
+                                            <Label Grid.Row="1"
+                                                   Text="{Binding Name}"
+                                                   TextColor="#00a141"
+                                                   FontSize="Small"
+                                                   FontFamily="ThemeFont"
+                                                   FontAttributes="Bold"/>
+                                            <Label Grid.Row="1"
+                                                   Margin="0,-8,0,0"
+                                                   Text="{Binding Price, StringFormat='${0}'}"
+                                                   FontSize="Small"
+                                                   FontFamily="ThemeFont"
+                                                   FontAttributes="Bold"
+                                                   VerticalTextAlignment="Center"/>
+                                        </StackLayout>
+                                    </Grid>
+                                <!--</ScrollView>-->
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
                 </Grid>
-                
+
                 <Grid Padding="0,0"
-                      Margin="0,20,0,30"
+                      Margin="0,40,0,50"
                       Grid.Row="2">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -114,12 +159,13 @@
                            FontSize="16"
                            Margin="20,0,0,0"/>
                     <ScrollView Orientation="Horizontal" HorizontalOptions="Start" Grid.Row="1" HorizontalScrollBarVisibility="Never">
-                        <Grid>
+                        <Grid RowSpacing="0" ColumnSpacing="20">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="100"/>
+                                <RowDefinition Height="40"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="180"/>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
@@ -127,77 +173,114 @@
                             </Grid.ColumnDefinitions>
                             
                             <ImageButton Grid.Column="0"
-                                     WidthRequest="150"
+                                     WidthRequest="180"
                                      HeightRequest="50"
                                      Aspect="AspectFill"
                                      Margin="20,0,0,0"
                                      Source="Access3.png"
                                      Clicked="Accessories_Clicked"
                                      BackgroundColor="#DEDEDE"/>
+                            <BoxView BackgroundColor="#86d32e"
+                                     HeightRequest="30"
+                                     Margin="20,0,0,0"
+                                     Grid.Row="1"
+                                     Grid.ColumnSpan="1"/>
                             <Label Grid.Column="0"
+                                   Grid.Row="1"
                                    Margin="20,0,0,0"
                                    Text="Accessories"
                                    HorizontalOptions="Center"
                                    VerticalOptions="Center"
-                                   FontSize="20"
+                                   FontSize="16"
                                    FontAttributes="Bold"
-                                   TextColor="#86d32e"/>
+                                   TextColor="White"/>
                             
                             <ImageButton Grid.Column="1"
-                                     WidthRequest="150"
+                                     WidthRequest="180"
                                      HeightRequest="50"
                                      Aspect="AspectFill"
                                      Source="Clean3.png"
+                                     Clicked="Accessories_Clicked"
                                      BackgroundColor="#DEDEDE"/>
+                            <BoxView BackgroundColor="#86d32e"
+                                     HeightRequest="40"
+                                     Grid.Row="1"
+                                     Grid.Column="1"
+                                     Grid.ColumnSpan="1"/>
                             <Label Grid.Column="1"
+                                   Grid.Row="1"
                                    Text="Cleaning"
                                    HorizontalOptions="Center"
                                    VerticalOptions="Center"
-                                   FontSize="20"
+                                   FontSize="16"
                                    FontAttributes="Bold"
-                                   TextColor="#86d32e"/>
+                                   TextColor="White"/>
+
                             <ImageButton Grid.Column="2"
-                                     WidthRequest="150"
+                                     WidthRequest="180"
                                      HeightRequest="50"
                                      Aspect="AspectFill"
-                                     Source="Cloth3.jpg"
+                                     Source="Cloth3.png"
+                                     Clicked="Accessories_Clicked"
                                      BackgroundColor="#DEDEDE"/>
+                            <BoxView BackgroundColor="#86d32e"
+                                     HeightRequest="40"
+                                     Grid.Row="1"
+                                     Grid.Column="2"
+                                     Grid.ColumnSpan="1"/>
                             <Label Grid.Column="2"
-                                   Margin="20,0,0,0"
+                                   Grid.Row="1"
                                    Text="Clothing"
                                    HorizontalOptions="Center"
                                    VerticalOptions="Center"
-                                   FontSize="20"
+                                   FontSize="16"
                                    FontAttributes="Bold"
-                                   TextColor="#86d32e"/>
+                                   TextColor="White"/>
+
                             <ImageButton Grid.Column="3"
-                                     WidthRequest="150"
+                                     WidthRequest="180"
                                      HeightRequest="50"
                                      Aspect="AspectFill"
-                                     Source="Furn3.jpg"
+                                     Source="Furn3.png"
+                                     Clicked="Accessories_Clicked"
                                      BackgroundColor="#DEDEDE"/>
+                            <BoxView BackgroundColor="#86d32e"
+                                     HeightRequest="40"
+                                     Grid.Row="1"
+                                     Grid.Column="3"
+                                     Grid.ColumnSpan="1"/>
                             <Label Grid.Column="3"
-                                   Margin="20,0,0,0"
+                                   Grid.Row="1"
                                    Text="Furniture"
                                    HorizontalOptions="Center"
                                    VerticalOptions="Center"
-                                   FontSize="20"
+                                   FontSize="16"
                                    FontAttributes="Bold"
-                                   TextColor="#86d32e"/>
+                                   TextColor="White"/>
+
                             <ImageButton Grid.Column="4"
-                                     WidthRequest="150"
+                                     WidthRequest="180"
                                      HeightRequest="50"
-                                     Aspect="AspectFill"
                                      Margin="0,0,20,0"
-                                     Source="Gard5.jpeg"
+                                     Aspect="AspectFill"
+                                     Source="Gard5.png"
+                                     Clicked="Accessories_Clicked"
                                      BackgroundColor="#DEDEDE"/>
+                            <BoxView BackgroundColor="#86d32e"
+                                     HeightRequest="40"
+                                     Margin="0,0,20,0"
+                                     Grid.Row="1"
+                                     Grid.Column="4"
+                                     Grid.ColumnSpan="1"/>
                             <Label Grid.Column="4"
+                                   Grid.Row="1"
                                    Text="Gardening"
+                                   Margin="0,0,20,0"
                                    HorizontalOptions="Center"
                                    VerticalOptions="Center"
-                                   FontSize="20"
+                                   FontSize="16"
                                    FontAttributes="Bold"
-                                   TextColor="#86d32e"/>
+                                   TextColor="White"/>
                         </Grid>
                     </ScrollView>
                 </Grid>

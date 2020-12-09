@@ -35,8 +35,7 @@
             </pancake:GradientStopCollection>
         </pancake:PancakeView.BackgroundGradientStops>-->
     <StackLayout Padding="24,48,24,24" >
-        <Image Source="GreenWorldLogo.png" WidthRequest="200" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="End"/>
-         <Grid RowSpacing="8">
+        <Grid RowSpacing="8">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="44"/>
                 <ColumnDefinition Width="*"/>

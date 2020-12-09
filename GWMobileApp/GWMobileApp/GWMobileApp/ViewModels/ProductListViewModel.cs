@@ -47,8 +47,6 @@ namespace GWMobileApp.ViewModels
                 var viewModel = new ProductDetailViewModel { SelectedProduct = selectedProduct, Products = products, Position = products.IndexOf(selectedProduct) };
                 var detailsPage = new ProductDetailPage { BindingContext = viewModel };
 
-                //var navigation = Application.Current.MainPage as NavigationPage;
-                //navigation.PushAsync(detailsPage, true);
                 App.Current.MainPage.Navigation.PushAsync(detailsPage, true);
             }
         }
