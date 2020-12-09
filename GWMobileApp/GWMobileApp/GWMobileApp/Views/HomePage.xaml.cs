@@ -21,5 +21,6 @@ namespace GWMobileApp.Views
         {
             await Navigation.PushAsync(new ProductTabsPage());
         }
+                
     }
 }

@@ -108,11 +108,15 @@
     // https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyout-header-->
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
-            <Grid>
+            <Grid BackgroundColor="White">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100"/>
                 </Grid.RowDefinitions>
-                <Label Text="This is a custom header"/>
+                <Image Source="NewGWLogo.png"
+                       HeightRequest="60"
+                       Aspect="AspectFill"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
             </Grid>
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
