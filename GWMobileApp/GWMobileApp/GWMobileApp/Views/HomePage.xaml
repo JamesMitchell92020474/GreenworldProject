@@ -17,46 +17,6 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <!--<CarouselView ItemsSource="{Binding Products}" Grid.Row="0" HeightRequest="350" IndicatorView="indicatorView">
-                    <CarouselView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid RowSpacing="0" VerticalOptions="Start">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="225"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
-                                <Image Source="{Binding Image}"
-                                       Aspect="AspectFill"
-                                       Grid.Row="0"/>
-                                <StackLayout BackgroundColor="#00a141"
-                                             Padding="20,10,20,10"
-                                             Grid.Row="1">
-                                    <Label Text="{Binding Name}"
-                                           VerticalTextAlignment="Center"
-                                           FontSize="Small"
-                                           TextColor="White"
-                                           HorizontalOptions="Start"/>
-                                    <Label Text="{Binding Price, StringFormat='${0}'}"
-                                           VerticalTextAlignment="Center"
-                                           FontSize="Small"
-                                           TextColor="White"
-                                           HorizontalOptions="Start"/>
-                                    <Button Text="See More"
-                                            Command="{Binding SelectionCommand}"
-                                            CommandParameter="{Binding Source={x:Binding SelectedProduct}}"
-                                            BackgroundColor="GreenYellow"
-                                            HorizontalOptions="Start"/>
-                                </StackLayout>
-                            </Grid>
-                        </DataTemplate>
-                    </CarouselView.ItemTemplate>
-                </CarouselView>
-                <IndicatorView x:Name="indicatorView"
-                       IndicatorColor="#86d32e"
-                       SelectedIndicatorColor="#00a141"
-                       HorizontalOptions="Center"
-                       VerticalOptions="End"
-                       Margin="0,0,0,75"/>-->
                 <Grid Grid.Row="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>

@@ -19,6 +19,7 @@
                 <x:Contact Name="Green World"
                                Address="167 Madras St"
                                City="Christchurch"
+                               Region="Canterbury"
                                Email="contact@greenworld.co.nz"
                                PhoneNumber="03-963 0033"
                                Country="New Zealand"
@@ -34,8 +35,33 @@
                 <pancake:GradientStop Color="Transparent" Offset="1" />
             </pancake:GradientStopCollection>
         </pancake:PancakeView.BackgroundGradientStops>-->
-    <StackLayout Padding="24,48,24,24" >
-        <Grid RowSpacing="8">
+    <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Image Source="Gard3.png"
+                           HeightRequest="200"
+                           Aspect="AspectFill"/>
+            <BoxView BackgroundColor="#00a141"
+                             HeightRequest="80"
+                             WidthRequest="240"
+                             Opacity="0.4"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"/>
+            <StackLayout WidthRequest="200"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Center">
+                <Label Text="Get in Touch"
+                               LineBreakMode="WordWrap"
+                               TextColor="White"
+                               HorizontalTextAlignment="Center"
+                               FontSize="22"
+                               FontAttributes="Bold"
+                               />
+            </StackLayout>
+        </Grid>
+        <Grid RowSpacing="8" Padding="20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="44"/>
                 <ColumnDefinition Width="*"/>
@@ -70,7 +96,7 @@
                         <FormattedString>
                             <Span Text="{Binding Contact.City}"/>
                             <Span Text=" "/>
-                            <Span Text="{Binding Contact.State}"/>
+                            <Span Text="{Binding Contact.Region}"/>
                             <Span Text=", "/>
                             <Span Text="{Binding Contact.ZipCode}"/>
                         </FormattedString>
